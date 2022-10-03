@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -49,21 +46,31 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyB9WPLrCxikP1Xl_us48pRAhEZjljX7jDU',
+    appId: '1:326619305769:web:5d3e19d6edb2620b3a8938',
+    messagingSenderId: '326619305769',
+    projectId: 'tik-tok-clone-backend',
+    authDomain: 'tik-tok-clone-backend.firebaseapp.com',
+    storageBucket: 'tik-tok-clone-backend.appspot.com',
+    measurementId: 'G-6J1DQH8VD2',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAm4iCnBVu4zhOSsczGeM9Hl4NKv0_juHY',
-    appId: '1:582990192470:android:9c9a5f8977a50b622a80f7',
-    messagingSenderId: '582990192470',
-    projectId: 'tiktok-backend-8a09d',
-    storageBucket: 'tiktok-backend-8a09d.appspot.com',
+    apiKey: 'AIzaSyArPJL3gDeG_qlL-egjTuVoHCUvLIUb-JQ',
+    appId: '1:326619305769:android:747723d8723a7f1c3a8938',
+    messagingSenderId: '326619305769',
+    projectId: 'tik-tok-clone-backend',
+    storageBucket: 'tik-tok-clone-backend.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBvVV5VAmKygABYzwCApdVhy-BZujpIlG0',
-    appId: '1:582990192470:ios:4f11fa35d600fe082a80f7',
-    messagingSenderId: '582990192470',
-    projectId: 'tiktok-backend-8a09d',
-    storageBucket: 'tiktok-backend-8a09d.appspot.com',
-    iosClientId: '582990192470-4vpqkqg1f44ciqk83kjpjtml2je1kssc.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDEUmI0tgh4MLvbe-gMfE9BxhxL1ioMIN8',
+    appId: '1:326619305769:ios:2bceeae4fd50ecf73a8938',
+    messagingSenderId: '326619305769',
+    projectId: 'tik-tok-clone-backend',
+    storageBucket: 'tik-tok-clone-backend.appspot.com',
+    iosClientId: '326619305769-n2fdpp4futc4nh4pklp6og3cppo112t1.apps.googleusercontent.com',
     iosBundleId: 'com.example.tikTokClone',
   );
 }
